@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editRec"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/alterar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuItemCriar"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/add"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuItemSobre"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/about"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

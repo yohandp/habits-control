@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rbG"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editDataNasc">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/nEx" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/exAsVzs" />
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/exSempre" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/altura"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/altura"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="34dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/kg"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/peso"
+                app:layout_constraintTop_toBottomOf="@+id/altura" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cadastro"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/imc"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/i_m_c"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/peso" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="34dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/m"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/altura"
+                app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="imcCalc"
+                android:text="@string/calcular"
+                app:layout_constraintStart_toEndOf="@+id/imc"
+                app:layout_constraintTop_toBottomOf="@+id/peso" />
+
+            <EditText
+                android:id="@+id/peso"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/peso"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/altura" />
+
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="321dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/nome"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName|textCapWords"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="340dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/veracDados"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbG" />
+
+            <EditText
+                android:id="@+id/editDataNasc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

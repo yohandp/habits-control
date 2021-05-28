@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recipientes">
+        <item>@string/none</item>
+        <item>@string/cup</item>
+        <item>@string/mug</item>
+        <item>@string/bottle</item>
+    </string-array>
+</resources>
